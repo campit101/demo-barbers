@@ -2,7 +2,7 @@
 
 Demo Barbers is a fictional British barber shop, built as a portfolio demo of online booking with a deposit. It sells nothing and takes no real money. Payments run on Stripe's test mode only, and every page says "Demo. Nothing is sold, test payments only". Visitors pick a service, a barber and a time, pay a 20% deposit, and get a private link to cancel or move the booking. It sends no emails. The shop's side is a diary where the owner sees the day, marks bookings completed or as no-shows, and refunds deposits. The shop, the barbers and the prices are invented, and every photo is AI-generated and labelled as such.
 
-A portfolio project by Cam, who led it and made the product, design and business decisions.
+A portfolio project by Cameron Pittaway. I made the product, design and business decisions.
 
 ## Live demo
 
