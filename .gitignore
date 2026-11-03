@@ -1,0 +1,30 @@
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+
+# Dependencies and builds
+node_modules/
+.next/
+.next-*/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel and test output
+.vercel/
+test-results/
+playwright-report/
+.lighthouse/
+
+# Working files
+.DS_Store
+Thumbs.db
+*.log
+
+# Fonts: the licence forbids redistributing them through a public repository. Fetched by scripts/fetch-fonts.mjs.
+public/fonts/
+
+# Vercel link
+.vercel
+

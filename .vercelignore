@@ -1,0 +1,11 @@
+.env*
+tests
+docs
+*.md
+.github
+test-results
+playwright-report
+.next-verify
+.next-e2e
+.next-helper-*
+.lighthouse

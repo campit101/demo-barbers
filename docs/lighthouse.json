@@ -1,0 +1,63 @@
+{
+  "measuredAt": "2026-11-03T01:22:34.568Z",
+  "site": "https://demo-barbers-uk.vercel.app",
+  "lighthouse": "13.5.0",
+  "preset": "mobile",
+  "pages": [
+    {
+      "url": "https://demo-barbers-uk.vercel.app/",
+      "runs": 5,
+      "medians": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "lcpMs": 2294,
+        "cls": 0,
+        "tbtMs": 381
+      },
+      "failing": [
+        "total-blocking-time"
+      ]
+    },
+    {
+      "url": "https://demo-barbers-uk.vercel.app/book",
+      "runs": 5,
+      "medians": {
+        "performance": 91,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "lcpMs": 2297,
+        "cls": 0,
+        "tbtMs": 319
+      },
+      "failing": [
+        "total-blocking-time"
+      ]
+    },
+    {
+      "url": "https://demo-barbers-uk.vercel.app/admin/sign-in",
+      "runs": 5,
+      "medians": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 63
+      },
+      "metrics": {
+        "lcpMs": 1391,
+        "cls": 0.001,
+        "tbtMs": 217
+      },
+      "failing": [
+        "total-blocking-time",
+        "is-crawlable"
+      ]
+    }
+  ]
+}

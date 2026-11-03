@@ -1,0 +1,61 @@
+{
+  "name": "demo-barbers",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:integration": "vitest run --config vitest.integration.config.mts",
+    "e2e": "playwright test",
+    "secret-scan": "node scripts/secret-scan.mjs",
+    "verify": "node scripts/verify.mjs",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node scripts/migrate.ts",
+    "db:seed": "node scripts/seed.ts",
+    "lighthouse": "node scripts/lighthouse.mjs",
+    "fonts": "node scripts/fetch-fonts.mjs",
+    "vercel-build": "node scripts/migrate.ts && node scripts/seed.ts && next build"
+  },
+  "dependencies": {
+    "@vercel/functions": "3.9.11",
+    "better-auth": "1.7.15",
+    "drizzle-orm": "0.45.4",
+    "next": "16.4.3",
+    "pg": "8.23.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "0.0.1",
+    "stripe": "23.1.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.64.0",
+    "@secretlint/secretlint-rule-preset-recommend": "13.0.7",
+    "@types/node": "24.19.2",
+    "@types/pg": "8.23.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "drizzle-kit": "0.31.11",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.3",
+    "lighthouse": "13.5.0",
+    "secretlint": "13.0.7",
+    "typescript": "5.9.3",
+    "vitest": "5.0.4"
+  },
+  "overrides": {
+    "playwright-core": "1.64.0",
+    "@vercel/cli-config": {
+      "zod": "4.6.7"
+    }
+  }
+}

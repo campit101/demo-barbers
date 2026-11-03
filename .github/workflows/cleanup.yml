@@ -1,0 +1,22 @@
+# Hourly tidy-up of demo data, free on a public repository (GitHub docs, checked 1 Nov 2026). Vercel's daily job is the backstop.
+# GitHub can delay or drop scheduled runs and turns them off after 60 days with no repository activity. Nothing depends on this
+# job for correctness: visitors' rows are hidden after 24 hours when read, and the daily job still deletes them.
+name: Clean up demo data
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+permissions: {}
+jobs:
+  cleanup:
+    # Only the public repository, where Actions minutes are free and the secret is set; never the private archive.
+    if: github.repository == 'campit101/demo-barbers'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Call the clean-up address
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          curl --fail --silent --show-error --max-time 60 --header "Authorization: Bearer $CRON_SECRET" "$SITE_URL/api/cron/cleanup"
