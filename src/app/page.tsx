@@ -204,7 +204,7 @@ export default function Home() {
             <Link href="/#services">Services</Link>
             <Link href="/#barbers">Barbers</Link>
             <Link href="/#questions">Questions</Link>
-            <a href="https://tarnfield.vercel.app/">Built by Tarnfield</a>
+            <a href="https://tarnfieldstudio.com/">Built by Tarnfield</a>
           </div>
         </div>
         <div className="legal">
